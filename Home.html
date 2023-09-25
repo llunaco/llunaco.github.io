@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>llunaco | Home</title>                                                               <!--tab title-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="warpspeed.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="/home.html" class="logo">llunaco</a>                                           <!--title-->
+        <ul class="navlist">                                                                    <!--navbar links-->
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/Creative.html">Creative</a></li>
+            <li><a href="/Gaming.html">Gaming</a></li>
+<!--        <li class="dropdown">
+            <li><a href="/profiles.html"></a></li>
+                <div class="dropdown-content">
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                </div>-->
+        </ul>
+    </header>
+    <section class="homesplash" data-section-name="splash">                                     <!--splash text-->
+        <div class="homesplash-text">
+            <h1>Hi, I'm</h1>
+            <h2>Luna</h2>
+            This is my personal site for my hobbies.
+            <br>Have a browse ツ
+            </p>
+            <a href="#"><i class="ri-play-fill"></i> Random Clip</a>
+            <a href="#">Roll the dice?</a>
+        </div> 
+        <div class="homesplash-img">                                                            <!--splash img-->
+            <img src="img/moonco.png">
+        </div>
+        <div class="scroll-down">                                                               <!--scroll down-->
+            <span class="bio"></span>
+            <a href="#homebio"><i class="ri-arrow-down-s-line"></i></a>
+         </div>
+    </section>
+   <section class="homebio" data-section-name="bio">
+    <div>
+        <iframe src="https://discord.com/widget?id=711996081382228019&theme=dark" 
+        width="350" height="500" allowtransparency="true" frameborder="0" 
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
+    <div class="homebio-text">
+            <h1>Join my discord!
+            <br>
+            </h1>
+        </div>
+        <div class="scroll-up">                                                                 <!--scroll up-->
+        <span class="splash"></span>
+        <a href="#homesplash"><i class="ri-arrow-up-s-line"></i></a>
+    </div></section>
+    </section>
+    <div class="icons">                                                                         <!--social media-->
+        <a href="https://x.com/llunaco"><i class="ri-twitter-line"></i></a>
+        <a href="https://www.twitch.tv/llunaco"><i class="ri-twitch-line"></i></a>
+        <a href="https://www.youtube.com/channel/UC_9eRWsZk9EtXemnEgfmUEQ"><i class="ri-youtube-line"></i></a>
+        <a href="https://discord.gg/AbuxbMdPVB"><i class="ri-discord-line"></i></a>
+        <a href="https://steamcommunity.com/id/llunaco/"><i class="ri-steam-line"></i></a>
+        <a href="https://github.com/llunaco"><i class="ri-github-line"></i></a>
+        <a href="https://kit.co/llunaco/llunaco"><i class="ri-computer-line"></i></a>
+    </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/script.js"></script>                                                        <!--internal js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   <!--scroll snapping-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
+			    integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
+			    crossorigin="anonymous"
+			    referrerpolicy="no-referrer"></script>
+        <script>
+			$(document).ready(function () {
+				screenCheck();
+				$('.scroll-down').click(function () {
+					$.scrollify.move('#bio');
+				});
+				$('.scroll-up').click(function () {
+					$.scrollify.move('#splash');
+				});
+			});
+			$(window).on('resize', function () {
+				screenCheck();
+			});
+			function applyScroll() {
+				$.scrollify({
+					section: '.scroll',
+					sectionName: 'section-name',
+					//standardScrollElements: 'section',
+					easing: 'easeOutExpo',
+					scrollSpeed: 1100,
+					offset: 0,
+					scrollbars: false,
+					setHeights: true,
+					overflowScroll: true,
+					updateHash: false,
+					touchScroll: true,
+				});
+			}
+			function screenCheck() {
+				var deviceAgent = navigator.userAgent.toLowerCase();
+				var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+				if (agentID || $(window).width() <= 1024) {
+					// if mobile
+					$.scrollify.destroy();
+					$('section').removeClass('scroll').removeAttr('style');
+					$.scrollify.disable();
+				} else {
+					// if desktop
+					$('section').addClass('scroll');
+					applyScroll();
+					$.scrollify.enable();
+				}
+			}
+		</script>
+	<div style="position:fixed; z-index:-1000; top:0; left:0; width:100%; height:100%;">
+		<canvas id="canvas" style="width:100%; height:100%;"></canvas>
+		<script type="text/javascript">new WarpSpeed("canvas");</script>
+	</div>
+</body>
+</html>
