@@ -40,7 +40,7 @@ body{                                           /*BODY*/
 .navlist a:hover{
     border-bottom: 2px solid #fff;
 }
-/*.dropdown {
+.dropdown {
     position: relative;
     display: inline-block;
 }
@@ -54,7 +54,7 @@ body{                                           /*BODY*/
 }
 .dropdown:hover .dropdown-content {
     display: block;
-}*/
+}
 #menu-icon{
     color: #fff;
     font-size: 35px;
