@@ -14,7 +14,7 @@ header{                                         /*HEADER*/
     align-items: center;
     justify-content: space-between;
     padding: 22px 9%;
-    background: rgba(0, 0, 0, 0.24);
+    background: rgba(0, 0, 0, 0);          /*rgba(0, 0, 0, 0.24);*/
     color: #fff
 }
 body{                                           /*BODY*/
