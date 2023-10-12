@@ -7,7 +7,6 @@ class llunacoHeader extends HTMLElement {
         <li><a data-scrollify="#home" href="#home">Home</a></li>
         <li><a data-scrollify="#creative" href="#creative">Creative</a></li>
         <li><a data-scrollify="#gaming" href="#gaming">Gaming</a></li>
-        <li><a data-scrollify="#articles" href="#articles">Articles</a></li>
     </ul>
     </header>
         `
